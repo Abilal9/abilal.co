@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+  line-height: 1.6;
+  padding: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e88e5; /* Bright accent color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  font-size: 1.5rem;
+  color: #b0b0b0; /* Lighter text */
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  background-color: #1f1f1f; /* Darker section background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #1e88e5; /* Bright accent color */
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1rem;
+  color: #e0e0e0; /* Light text color */
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #1e88e5; /* Bright accent color */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #1e88e5; /* Bright accent color */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
