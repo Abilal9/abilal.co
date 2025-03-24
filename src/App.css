@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Basic reset and dark mode setup */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,14 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212; /* Dark background */
-  color: #f0f0f0; /* Light text color */
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
   line-height: 1.6;
   padding: 40px;
 }
 
-/* Header */
+/* Header styles */
 .App-header {
   text-align: center;
   margin-bottom: 40px;
@@ -22,33 +22,49 @@ body {
 .name {
   font-size: 3rem;
   font-weight: bold;
-  color: #1e88e5; /* Bright accent color */
+  color: #e53935;
 }
 
 .title {
   font-size: 1.5rem;
-  color: #b0b0b0; /* Lighter text */
+  color: #b0b0b0;
   margin-top: 10px;
 }
 
-/* Sections */
-section {
-  background-color: #1f1f1f; /* Darker section background */
+/* Section styles for fade effect */
+.fade-section {
+  background-color: #1f1f1f;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 20px;
   margin-bottom: 30px;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Headings */
 h2 {
   font-size: 1.75rem;
-  color: #1e88e5; /* Bright accent color */
+  color: #e53935;
   margin-bottom: 10px;
 }
 
-p, ul {
+/* Text and lists */
+p,
+ul {
   font-size: 1rem;
-  color: #e0e0e0; /* Light text color */
+  color: #e0e0e0;
 }
 
 ul {
@@ -63,10 +79,10 @@ ul li {
 }
 
 ul li:before {
-  content: '•';
+  content: "•";
   position: absolute;
   left: 0;
-  color: #1e88e5; /* Bright accent color */
+  color: #e53935;
 }
 
 /* Footer */
@@ -77,10 +93,14 @@ footer {
 }
 
 footer a {
-  color: #1e88e5; /* Bright accent color */
+  color: #e53935;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
 }
