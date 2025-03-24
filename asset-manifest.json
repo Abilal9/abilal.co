@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abilal.co/static/css/main.45604960.css",
+    "main.js": "/abilal.co/static/js/main.7946cb79.js",
+    "static/js/453.78a9c187.chunk.js": "/abilal.co/static/js/453.78a9c187.chunk.js",
+    "index.html": "/abilal.co/index.html",
+    "main.45604960.css.map": "/abilal.co/static/css/main.45604960.css.map",
+    "main.7946cb79.js.map": "/abilal.co/static/js/main.7946cb79.js.map",
+    "453.78a9c187.chunk.js.map": "/abilal.co/static/js/453.78a9c187.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45604960.css",
+    "static/js/main.7946cb79.js"
+  ]
+}
