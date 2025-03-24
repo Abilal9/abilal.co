@@ -1,7 +1,6 @@
 {
   "name": "abilal.co-webapp",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://abilal9.github.io/abilal.co",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
