@@ -1,7 +1,7 @@
 {
   "name": "abilal.co-webapp",
   "version": "0.1.0",
-  "homepage": "https://abilal9.github.io/abilal.co",
+  "homepage": "https://abilal.co",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
