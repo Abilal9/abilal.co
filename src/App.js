@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import { useInView } from "react-intersection-observer";
-import ProjectSection from "./ProjectSection"; // Adjust the path as needed
+import ProjectSection from "./ProjectSection";
+import profilePic from './assets/profile_pic.jpg';
 
 function App() {
-  // Main sections useInView hooks
   const { ref: aboutRef, inView: aboutInView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
@@ -18,7 +18,6 @@ function App() {
     threshold: 0.3,
   });
 
-  // List of 10 projects
   const projects = Array.from({ length: 10 }, (_, index) => ({
     title: `Project Example ${index + 1}`,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -26,9 +25,44 @@ function App() {
 
   return (
     <div className="App">
+      <a href="#" className="easter-egg-link">
+        Congrats you found the easter egg!
+      </a>
       <header className="App-header">
-        <h1 className="name">Ahmad Bilal</h1>
-        <p className="title">Software Engineer & Developer</p>
+        <div className="profile-container">
+          <img src={profilePic} alt="Profile" className="profile-img" />
+          <div className="name-container">
+            <h1 className="name">Ahmad Bilal</h1>
+            <p className="title">Software Engineer & Developer</p>
+            <div className="socials">
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/ahmadanasbilal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                {" | "}
+                <a
+                  href="https://github.com/abilal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                {" | "}
+                <a href="tel:+966560900600">
+                  +966 560 900 600
+                </a>
+                {" | "}
+                <a href="mailto:ahmad.anas.ab@gmail.com">
+                  ahmad.anas.ab@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </header>
 
       <section
@@ -68,7 +102,6 @@ function App() {
         </ul>
       </section>
 
-      {/* Use the ProjectSection component for each project */}
       {projects.map((project, index) => (
         <ProjectSection
           key={index}
@@ -79,8 +112,14 @@ function App() {
 
       <footer>
         <p>Contact</p>
-        <p>Email: ahmad.anas.ab@gmail.com</p>
-        <p>Number: +966 560 900 600</p>
+        <p>
+          <a href="mailto:ahmad.anas.ab@gmail.com" style={{ color: "#e53935" }}>
+            ahmad.anas.ab@gmail.com
+          </a>
+        </p>
+        <a href="tel:+966560900600" style={{ color: "#e53935" }}>
+          +966 560 900 600
+        </a>
         <p>
           <a
             href="https://www.linkedin.com/in/ahmadanasbilal"
