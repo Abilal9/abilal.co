@@ -1,17 +1,27 @@
+/* Reset Default Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
   font-family: "Arial", sans-serif;
   background-color: #121212;
   color: #f0f0f0;
   line-height: 1.6;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
+/* Centered Content Wrapper */
+.content-container {
+  max-width: 1100px;  /* Increase max-width to match the projects */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header Section */
 .App-header {
   display: flex; 
   align-items: center; 
@@ -39,17 +49,18 @@ body {
 }
 
 .name {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #e53935;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #b0b0b0;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
+/* Social Links */
 .socials {
   margin-top: 10px;
   text-align: left; 
@@ -72,17 +83,38 @@ body {
   color: #e53935;  
 }
 
-.fade-section {
+/* Section Styling (Ensuring Consistent Width) */
+.fade-section, .project-section {
+  width: 100%;  /* Ensure both sections take full width */
+  max-width: 1100px; /* Prevent excessive stretching */
+  margin: 20px auto; /* Ensure centering */
   background-color: #1f1f1f;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  margin-bottom: 30px;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 25px;
+  transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
 }
 
+/* Hover Effect */
+.fade-section:hover, .project-section:hover {
+  transform: scale(1.05);  /* Slightly enlarge the section */
+  background-color: #333333;  /* Change to a more greyish color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);  /* Increase shadow for emphasis */
+}
+
+/* Reduce gap before projects */
+.fade-section:last-of-type {
+  margin-bottom: 15px;
+}
+
+/* Reduce margin between sections and projects */
+.project-section {
+  margin-top: 15px;
+}
+
+/* Animations */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -93,18 +125,25 @@ body {
   transform: translateY(30px);
 }
 
+/* Section Titles */
 h2 {
   font-size: 1.75rem;
   color: #e53935;
   margin-bottom: 10px;
+  border-bottom: 2px solid #e53935;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-p,
-ul {
+/* Paragraphs & Lists */
+p, ul {
   font-size: 1rem;
   color: #e0e0e0;
+  text-align: left;  /* Left-align text */
+  margin-left: 20px;  /* Optional: Add space from the left edge */
 }
 
+/* List Styling */
 ul {
   list-style-type: none;
   margin-top: 10px;
@@ -116,6 +155,7 @@ ul li {
   position: relative;
 }
 
+/* Custom Bullet Points */
 ul li:before {
   content: "•";
   position: absolute;
@@ -123,25 +163,41 @@ ul li:before {
   color: #e53935;
 }
 
+/* Footer */
 footer {
-  text-align: center;
+  text-align: center;  /* Center the footer text */
   font-size: 1rem;
   margin-top: 40px;
+  width: 100%;  /* Ensure the footer takes full width */
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
 }
 
+/* Footer Paragraphs */
+footer p {
+  margin-bottom: 15px;  /* Uniform spacing between each element */
+}
+
+/* Footer Links */
 footer a {
   color: #e53935;
   text-decoration: none;
+  display: inline-block;  
+  margin-top: 5px;  
+  text-align: center;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
+/* Easter Egg Link (Hidden) */
 .easter-egg-link {
   display: none;
 }
