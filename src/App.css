@@ -197,6 +197,32 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  width: 100vw; /* Prevent extra width */
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+}
+
+/* Scrollbar Thumb (Draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #e53935; /* Red color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* Scrollbar Track (Background behind thumb) */
+::-webkit-scrollbar-track {
+  background-color: #1f1f1f; /* Dark background */
+}
+
+/* On Hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
 /* Easter Egg Link (Hidden) */
 .easter-egg-link {
   display: none;
