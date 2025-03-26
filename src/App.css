@@ -267,3 +267,45 @@ html, body {
   transition: transform 0.3s ease-out;
   will-change: transform;
 }
+
+/* Projects */
+.project-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.project-section:hover {
+  background-color: #333333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Expansion Effect */
+.project-section.expanded {
+  transform: scale(1.1); /* Enlarges the entire box */
+  background-color: #292929; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  padding: 40px; /* Ensures space for expanded content */
+}
+
+/* Hide description by default */
+.project-description {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, height 0.4s ease, padding 0.3s ease;
+}
+
+/* Show description when expanded */
+.project-section.expanded .project-description {
+  opacity: 1;
+  height: auto;  /* Let it grow naturally */
+  padding-top: 15px; /* Adds smooth spacing when expanding */
+}
