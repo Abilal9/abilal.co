@@ -158,27 +158,15 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <p><strong>Contact</strong></p>
-        <p>
-          <a href="mailto:ahmad.anas.ab@gmail.com" style={{ color: "#e53935" }}>
-            ahmad.anas.ab@gmail.com
-          </a>
-        </p>
-        <p>
-          <a href="tel:+966560900600" style={{ color: "#e53935" }}>
-            +966 560 900 600
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/ahmadanasbilal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </p>
-      </footer>
+  <p><strong>Contact</strong></p>
+  <div className="footer-links">
+     <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>|</span>
+       <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
+    <span>|</span>
+    <a href="tel:+966560900600">+966 560 900 600</a>
+  </div>
+</footer>
     </div>
   );
 }

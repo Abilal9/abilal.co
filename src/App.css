@@ -180,16 +180,34 @@ footer p {
 }
 
 /* Footer Links */
-footer a {
-  color: #e53935;
-  text-decoration: none;
-  display: inline-block;  
-  margin-top: 5px;  
+footer {
   text-align: center;
+  margin-top: 40px;
 }
 
-footer a:hover {
+.footer-links {
+  display: flex;
+  justify-content: center;  /* Centers content horizontally */
+  gap: 15px;  /* Spacing between elements */
+  font-size: 1rem;
+  color: #e53935;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c62828;  /* Darker red on hover */
   text-decoration: underline;
+}
+
+/* Styling the "|" separator */
+.footer-links span {
+  color: #f0f0f0;
+  font-weight: bold;
 }
 
 /* Smooth Scrolling */
