@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { useInView } from "react-intersection-observer";
 import ProjectSection from "./ProjectSection";
@@ -15,8 +15,58 @@ function App() {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   }));
 
+  useEffect(() => {
+    const shapes = document.querySelectorAll(".background-shape");
+    shapes.forEach((shape) => {
+      if (!shape.dataset.xFactor) {
+        shape.dataset.xFactor = (Math.random() - 0.5).toFixed(2);
+        shape.dataset.yFactor = (Math.random() - 0.5).toFixed(2);
+      }
+    });
+  
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          shapes.forEach((shape) => {
+            const xFactor = parseFloat(shape.dataset.xFactor);
+            const yFactor = parseFloat(shape.dataset.yFactor);
+            shape.style.transform = `translate(${ -scrollY * xFactor }px, ${ -scrollY * yFactor }px)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="App">
+      <div className="background-shapes">
+        <div className="background-shape star" style={{ top: "5%", left: "5%" }}></div>
+        <div className="background-shape star" style={{ top: "10%", left: "90%" }}></div>
+        <div className="background-shape star" style={{ top: "15%", left: "12%" }}></div>
+        <div className="background-shape star" style={{ top: "20%", left: "85%" }}></div>
+        <div className="background-shape star" style={{ top: "28%", left: "8%" }}></div>
+        <div className="background-shape star" style={{ top: "35%", left: "92%" }}></div>
+        <div className="background-shape star" style={{ top: "42%", left: "10%" }}></div>
+        <div className="background-shape star" style={{ top: "50%", left: "88%" }}></div>
+        <div className="background-shape star" style={{ top: "58%", left: "6%" }}></div>
+        <div className="background-shape star" style={{ top: "65%", left: "93%" }}></div>
+        <div className="background-shape star" style={{ top: "72%", left: "15%" }}></div>
+        <div className="background-shape star" style={{ top: "80%", left: "85%" }}></div>
+        <div className="background-shape star" style={{ top: "87%", left: "8%" }}></div>
+        <div className="background-shape star" style={{ top: "93%", left: "90%" }}></div>
+        <div className="background-shape star" style={{ top: "100%", left: "5%" }}></div>
+        <div className="background-shape star" style={{ top: "108%", left: "92%" }}></div>
+        <div className="background-shape star" style={{ top: "115%", left: "12%" }}></div>
+        <div className="background-shape star" style={{ top: "125%", left: "88%" }}></div>
+      </div>
+
       <a href="#" className="easter-egg-link">Congrats you found the easter egg!</a>
       
       <header className="App-header">
@@ -40,18 +90,18 @@ function App() {
       <div className="content-container">
         {/* About Me Section */}
         <section ref={aboutRef} className={`fade-section ${aboutInView ? "fade-in" : "fade-out"}`}>
-  <h2>About Me</h2>
-  <p>
-    As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices. Committed to continuous learning, I consistently seek new challenges to apply my technical expertise while meeting stakeholder needs and maintaining professional communication.
-  </p>
-  <br />
-  <p>
-    My work and academic experiences highlight strong teamwork and a passion for technology. I look forward to connecting with professionals and contributing to projects that make a positive impact.
-  </p>
-</section>
+          <h2>About Me</h2>
+          <p>
+            As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices. Committed to continuous learning, I consistently seek new challenges to apply my technical expertise while meeting stakeholder needs and maintaining professional communication.
+          </p>
+          <br />
+          <p>
+            My work and academic experiences highlight strong teamwork and a passion for technology. I look forward to connecting with professionals and contributing to projects that make a positive impact.
+          </p>
+        </section>
 
         {/* Education Section */}
-                <section ref={educationRef} className={`fade-section ${educationInView ? "fade-in" : "fade-out"}`}>
+        <section ref={educationRef} className={`fade-section ${educationInView ? "fade-in" : "fade-out"}`}>
           <h2>Education</h2>
           <ul>
             <li><strong>Harvard Business School</strong> - Data Science for Business (November 2024 - January 2025)</li>
@@ -108,27 +158,27 @@ function App() {
 
       {/* Footer */}
       <footer>
-      <p><strong>Contact</strong></p>
-      <p>
-    <a href="mailto:ahmad.anas.ab@gmail.com" style={{ color: "#e53935" }}>
-      ahmad.anas.ab@gmail.com
-    </a>
-  </p>
-  <p>
-    <a href="tel:+966560900600" style={{ color: "#e53935" }}>
-      +966 560 900 600
-    </a>
-  </p>
-  <p>
-    <a
-      href="https://www.linkedin.com/in/ahmadanasbilal"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      LinkedIn
-    </a>
-  </p>
-</footer>
+        <p><strong>Contact</strong></p>
+        <p>
+          <a href="mailto:ahmad.anas.ab@gmail.com" style={{ color: "#e53935" }}>
+            ahmad.anas.ab@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="tel:+966560900600" style={{ color: "#e53935" }}>
+            +966 560 900 600
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/ahmadanasbilal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

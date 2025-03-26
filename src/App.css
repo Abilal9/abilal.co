@@ -201,3 +201,25 @@ html {
 .easter-egg-link {
   display: none;
 }
+
+/* Background Shapes Container */
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 200vh;  /* Extend to cover the entire scrollable area */
+  pointer-events: none; /* So they don’t block clicks */
+  z-index: -1; /* Behind all content */
+}
+
+.background-shape.star {
+  position: absolute;
+  width: 25px;   /* Bigger star */
+  height: 25px;  /* Bigger star */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  border: 10px solid #e53935;
+  opacity: 0.7;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
