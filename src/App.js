@@ -12,38 +12,38 @@ function App() {
 
   const projects = [
     {
-      title: "Smart City Traffic Analyzer",
-      description: "Built a system to monitor traffic and congestion levels using real-time video feeds.",
-      duration: "Jan 2022 - Sep 2022",
+      title: "IMO - Ministers Communication Platform (MCP)",
+      description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
+      duration: "January 2024 - December 2024",
       associatedWith: "Solutions by STC",
       logo: "/logos/stc.png",
     },
     {
-      title: "Healthcare Chatbot Assistant",
-      description: "Developed an AI-powered chatbot to assist patients with appointment scheduling and FAQs.",
-      duration: "Oct 2021 - Dec 2021",
-      associatedWith: "Cura Health",
+      title: "STC Cloud",
+      description: "STC Cloud is Saudi Arabia's leading business cloud solution provider. It offers a range of cloud services that are reliable, flexible, and scalable to meet the needs of various businesses. The platform provides local data hosting with advanced Tier IV data centers located in Riyadh and Jeddah. These data centers are built, managed, and operated to ensure a high level of service availability, with a 99.99% uptime guarantee. The services offered by STC Cloud are designed to support businesses by providing them with the necessary cloud features at their own pace, ensuring data safety, security, and operational efficiency.",
+      duration: "August 2023 - December June 2024",
+      associatedWith: "Solutions by STC",
       logo: "/logos/cura.png",
     },
     {
-      title: "E-commerce Recommendation Engine",
-      description: "Created a machine learning engine to recommend products based on user behavior.",
-      duration: "May 2021 - Sep 2021",
-      associatedWith: "Noon",
+      title: "Insurance Authority",
+      description: "Collaborated closely with client to understand and fulfill their needs and requirements, implementing fixes, improvements, and updates to the website. Additionally, responsible for deploying these changes on premises to ensure smooth implementation.",
+      duration: "January 2024 - February  2024",
+      associatedWith: "Solutions by STCs",
       logo: "/logos/noon.png",
     },
     {
-      title: "Autonomous Drone Navigation",
-      description: "Implemented pathfinding algorithms for drones in GPS-denied environments.",
-      duration: "Feb 2021 - Apr 2021",
-      associatedWith: "STC Drone Lab",
+      title: "Unity Dashboard",
+      description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform designed to streamline internal processes by providing a centralized interface for accessing employee, customer, and account information. The platform enables users to efficiently look up and manage detailed profiles, ensuring quick access to essential data for internal use.",
+      duration: "August 2023 - January 2024",
+      associatedWith: "Solutions by STC",
       logo: "/logos/drone-lab.png",
     },
     {
       title: "Road Segmentation with Deep Learning",
       description: "Built a deep neural network for segmenting roads in satellite images.",
       duration: "Jul 2020 - Jan 2021",
-      associatedWith: "Space Center AI Lab",
+      associatedWith: "Mohammed bin Rashed Space Centre",
       logo: "/logos/space-center.png",
     },
     {
@@ -226,7 +226,7 @@ function App() {
     title={project.title}
     description={project.description}
     duration={project.duration}
-    associatedWith={project.associatedWith}
+    company={project.associatedWith}
     logo={project.logo}
   />
 ))}
