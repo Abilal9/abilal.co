@@ -68,6 +68,12 @@ body {
   color: #e53935;
 }
 
+@media (max-width: 600px) {
+  .name {
+    font-size: 2rem; /* smaller font for phones */
+  }
+}
+
 .title {
   font-size: 1.3rem;
   color: #b0b0b0;
