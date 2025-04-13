@@ -3,6 +3,11 @@ import "./App.css";
 import { useInView } from "react-intersection-observer";
 import ProjectSection from "./ProjectSection";
 import profilePic from "./assets/profile_pic.jpg";
+import stcsLogo from './assets/logos/stcs_logo.jpeg';
+import mbrscLogo from './assets/logos/mbrsc_logo.jpeg';
+import tantumLogo from './assets/logos/tantum_logo.jpeg';
+import ausLogo from './assets/logos/aus_logo.jpeg';
+
 
 function App() {
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -16,70 +21,70 @@ function App() {
       description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
       duration: "January 2024 - December 2024",
       associatedWith: "Solutions by STC",
-      logo: "/logos/stc.png",
+      logo: stcsLogo,
     },
     {
       title: "STC Cloud",
       description: "STC Cloud is Saudi Arabia's leading business cloud solution provider. It offers a range of cloud services that are reliable, flexible, and scalable to meet the needs of various businesses. The platform provides local data hosting with advanced Tier IV data centers located in Riyadh and Jeddah. These data centers are built, managed, and operated to ensure a high level of service availability, with a 99.99% uptime guarantee. The services offered by STC Cloud are designed to support businesses by providing them with the necessary cloud features at their own pace, ensuring data safety, security, and operational efficiency.",
       duration: "August 2023 - December June 2024",
       associatedWith: "Solutions by STC",
-      logo: "/logos/cura.png",
+      logo: stcsLogo,
     },
     {
       title: "Insurance Authority",
       description: "Collaborated closely with client to understand and fulfill their needs and requirements, implementing fixes, improvements, and updates to the website. Additionally, responsible for deploying these changes on premises to ensure smooth implementation.",
       duration: "January 2024 - February  2024",
-      associatedWith: "Solutions by STCs",
-      logo: "/logos/noon.png",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
     },
     {
       title: "Unity Dashboard",
       description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform designed to streamline internal processes by providing a centralized interface for accessing employee, customer, and account information. The platform enables users to efficiently look up and manage detailed profiles, ensuring quick access to essential data for internal use.",
       duration: "August 2023 - January 2024",
       associatedWith: "Solutions by STC",
-      logo: "/logos/drone-lab.png",
+      logo: stcsLogo,
     },
     {
       title: "Road Segmentation with Deep Learning",
       description: "Built a deep neural network for segmenting roads in satellite images.",
       duration: "Jul 2020 - Jan 2021",
       associatedWith: "Mohammed bin Rashed Space Centre",
-      logo: "/logos/space-center.png",
+      logo: mbrscLogo,
     },
     {
       title: "Financial Fraud Detection",
       description: "Used anomaly detection to identify suspicious transactions in real-time.",
       duration: "Nov 2019 - Jun 2020",
       associatedWith: "BankTech",
-      logo: "/logos/banktech.png",
+      logo: tantumLogo,
     },
     {
       title: "OutSystems Automation Tool",
       description: "Built an internal automation tool to speed up OutSystems deployments.",
       duration: "Aug 2019 - Oct 2019",
       associatedWith: "OutSystems Partner Co.",
-      logo: "/logos/outsystems.png",
+      logo: tantumLogo,
     },
     {
       title: "Kubernetes Resource Visualizer",
       description: "Developed a UI for visualizing and managing K8s clusters.",
       duration: "Mar 2019 - Jul 2019",
       associatedWith: "DevOps HQ",
-      logo: "/logos/devops-hq.png",
+      logo: tantumLogo,
     },
     {
       title: "Cybersecurity Threat Dashboard",
       description: "Created a live dashboard to visualize threat levels and alerts.",
       duration: "Dec 2018 - Feb 2019",
       associatedWith: "RedShield Security",
-      logo: "/logos/redshield.png",
+      logo: tantumLogo,
     },
     {
       title: "Fitness Tracker App",
       description: "Designed a mobile app to log workouts and track fitness goals.",
       duration: "Jul 2018 - Nov 2018",
       associatedWith: "FitWave",
-      logo: "/logos/fitwave.png",
+      logo: ausLogo,
     },
   ];
 
@@ -144,10 +149,9 @@ function App() {
             <h1 className="name">Ahmad Bilal</h1>
             <p className="title">Software Engineer & Developer</p>
             <div className="socials">
-              <p>
-                <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer"> LinkedIn </a> | 
-                <a href="https://github.com/abilal9" target="_blank" rel="noopener noreferrer"> GitHub </a> | 
-                <a href="tel:+966560900600"> +966 560 900 600 </a> | 
+              <p> 
+                <a href="tel:+966560900600"> +966 560 900 600 </a> |
+                <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer"> LinkedIn </a> |
                 <a href="mailto:ahmad.anas.ab@gmail.com"> ahmad.anas.ab@gmail.com </a>
               </p>
             </div>
