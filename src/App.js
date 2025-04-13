@@ -161,10 +161,8 @@ function App() {
   <p><strong>Contact</strong></p>
   <div className="footer-links">
      <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <span>|</span>
-       <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
-    <span>|</span>
-    <a href="tel:+966560900600">+966 560 900 600</a>
+     <a href="tel:+966560900600">+966 560 900 600</a>
+     <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
   </div>
 </footer>
     </div>
