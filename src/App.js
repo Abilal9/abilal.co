@@ -7,6 +7,7 @@ import stcsLogo from './assets/logos/stcs_logo.jpeg';
 import mbrscLogo from './assets/logos/mbrsc_logo.jpeg';
 import tantumLogo from './assets/logos/tantum_logo.jpeg';
 import ausLogo from './assets/logos/aus_logo.jpeg';
+import ProfileFlip from './ProfileFlip'; 
 
 
 function App() {
@@ -144,7 +145,7 @@ function App() {
       
       <header className="App-header">
         <div className="profile-container">
-          <img src={profilePic} alt="Profile" className="profile-img" />
+        <ProfileFlip />
           <div className="name-container">
             <h1 className="name">Ahmad Bilal</h1>
             <p className="title">Software Engineer & Developer</p>
