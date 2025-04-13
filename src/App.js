@@ -10,10 +10,78 @@ function App() {
   const { ref: experienceRef, inView: experienceInView } = useInView({ triggerOnce: false, threshold: 0.3 });
   const { ref: educationRef, inView: educationInView } = useInView({ triggerOnce: false, threshold: 0.3 });
 
-  const projects = Array.from({ length: 10 }, (_, index) => ({
-    title: `Project Example ${index + 1}`,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  }));
+  const projects = [
+    {
+      title: "Smart City Traffic Analyzer",
+      description: "Built a system to monitor traffic and congestion levels using real-time video feeds.",
+      duration: "Jan 2022 - Sep 2022",
+      associatedWith: "Solutions by STC",
+      logo: "/logos/stc.png",
+    },
+    {
+      title: "Healthcare Chatbot Assistant",
+      description: "Developed an AI-powered chatbot to assist patients with appointment scheduling and FAQs.",
+      duration: "Oct 2021 - Dec 2021",
+      associatedWith: "Cura Health",
+      logo: "/logos/cura.png",
+    },
+    {
+      title: "E-commerce Recommendation Engine",
+      description: "Created a machine learning engine to recommend products based on user behavior.",
+      duration: "May 2021 - Sep 2021",
+      associatedWith: "Noon",
+      logo: "/logos/noon.png",
+    },
+    {
+      title: "Autonomous Drone Navigation",
+      description: "Implemented pathfinding algorithms for drones in GPS-denied environments.",
+      duration: "Feb 2021 - Apr 2021",
+      associatedWith: "STC Drone Lab",
+      logo: "/logos/drone-lab.png",
+    },
+    {
+      title: "Road Segmentation with Deep Learning",
+      description: "Built a deep neural network for segmenting roads in satellite images.",
+      duration: "Jul 2020 - Jan 2021",
+      associatedWith: "Space Center AI Lab",
+      logo: "/logos/space-center.png",
+    },
+    {
+      title: "Financial Fraud Detection",
+      description: "Used anomaly detection to identify suspicious transactions in real-time.",
+      duration: "Nov 2019 - Jun 2020",
+      associatedWith: "BankTech",
+      logo: "/logos/banktech.png",
+    },
+    {
+      title: "OutSystems Automation Tool",
+      description: "Built an internal automation tool to speed up OutSystems deployments.",
+      duration: "Aug 2019 - Oct 2019",
+      associatedWith: "OutSystems Partner Co.",
+      logo: "/logos/outsystems.png",
+    },
+    {
+      title: "Kubernetes Resource Visualizer",
+      description: "Developed a UI for visualizing and managing K8s clusters.",
+      duration: "Mar 2019 - Jul 2019",
+      associatedWith: "DevOps HQ",
+      logo: "/logos/devops-hq.png",
+    },
+    {
+      title: "Cybersecurity Threat Dashboard",
+      description: "Created a live dashboard to visualize threat levels and alerts.",
+      duration: "Dec 2018 - Feb 2019",
+      associatedWith: "RedShield Security",
+      logo: "/logos/redshield.png",
+    },
+    {
+      title: "Fitness Tracker App",
+      description: "Designed a mobile app to log workouts and track fitness goals.",
+      duration: "Jul 2018 - Nov 2018",
+      associatedWith: "FitWave",
+      logo: "/logos/fitwave.png",
+    },
+  ];
 
   useEffect(() => {
     const shapes = document.querySelectorAll(".background-shape");
@@ -153,8 +221,15 @@ function App() {
 
       {/* Projects Section */}
       {projects.map((project, index) => (
-        <ProjectSection key={index} title={project.title} description={project.description} />
-      ))}
+  <ProjectSection
+    key={index}
+    title={project.title}
+    description={project.description}
+    duration={project.duration}
+    associatedWith={project.associatedWith}
+    logo={project.logo}
+  />
+))}
 
       {/* Footer */}
       <footer>

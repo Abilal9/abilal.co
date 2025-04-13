@@ -267,35 +267,46 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 25px;
-  transition: all 0.4s ease-in-out;
   cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, padding 0.5s ease, max-height 0.5s ease;
+  max-height: 120px;
+  transition: all 0.4s ease-in-out;
 }
 
-/* Hover Effect */
 .project-section:hover {
   background-color: #333333;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Expansion Effect */
 .project-section.expanded {
-  transform: scale(1.1); /* Enlarges the entire box */
-  background-color: #292929; 
+  background-color: #292929;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  padding: 40px; /* Ensures space for expanded content */
+  padding: 40px 25px;
+  max-height: 800px;
 }
 
-/* Hide description by default */
-.project-description {
+.project-description,
+.project-details,
+.project-logo {
   opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.4s ease, height 0.4s ease, padding 0.3s ease;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 
-/* Show description when expanded */
-.project-section.expanded .project-description {
+.project-section.expanded .project-description,
+.project-section.expanded .project-details,
+.project-section.expanded .project-logo {
   opacity: 1;
-  height: auto;  /* Let it grow naturally */
-  padding-top: 15px; /* Adds smooth spacing when expanding */
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.project-logo {
+  margin-top: 10px;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
