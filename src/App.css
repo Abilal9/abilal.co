@@ -110,6 +110,7 @@ body {
 @media (max-width: 600px) {
   .name {
     font-size: 2rem; /* smaller font for phones */
+    text-align: center;
   }
 }
 
@@ -117,12 +118,33 @@ body {
   font-size: 1.3rem;
   color: #b0b0b0;
   margin-top: 5px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    margin-top: 5px;
+    text-align: center;
+  }
 }
 
 /* Social Links */
 .socials {
   margin-top: 10px;
-  text-align: left; 
+  text-align: left;
+  display: inline-block; 
+  white-space: nowrap; 
+}
+
+@media (max-width: 600px) {
+  .socials {
+    color: #b0b0b0;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
 
 .socials p {
@@ -133,7 +155,6 @@ body {
 .socials a {
   color: white; 
   text-decoration: none; 
-  font-size: 1rem; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
