@@ -14,11 +14,50 @@ body {
   padding: 40px 20px;
 }
 
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+}
+
 /* Centered Content Wrapper */
 .content-container {
   max-width: 1100px;  /* Increase max-width to match the projects */
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .content-container {
+    padding: 0 10px;
+  }
+
+  .fade-section, .project-section {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .socials p, .socials a {
+    font-size: 0.85rem;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 /* Header Section */
@@ -265,6 +304,7 @@ html, body {
   min-height: 200vh;  /* Extend to cover the entire scrollable area */
   pointer-events: none; /* So they don’t block clicks */
   z-index: -1; /* Behind all content */
+  overflow: hidden;
 }
 
 .background-shape.star {
@@ -329,4 +369,29 @@ html, body {
   height: auto;
   object-fit: contain;
   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .project-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-section p {
+    font-size: 0.85rem;
+  }
+
+  .project-section img {
+    max-width: 40px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  section ul li {
+    font-size: 0.9rem;
+  }
 }
