@@ -295,6 +295,17 @@ html, body {
   width: 5px; /* Adjust scrollbar width */
 }
 
+@media (max-width: 768px) {
+  html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Scrollbar Thumb (Draggable part) */
 ::-webkit-scrollbar-thumb {
   background-color: #e53935; /* Red color */
