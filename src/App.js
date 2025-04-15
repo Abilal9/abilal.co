@@ -132,7 +132,7 @@ function App() {
         <div className="background-shape star" style={{ top: "5%", left: "5%" }}></div>
         <div className="background-shape star" style={{ top: "10%", left: "90%" }}></div>
         <div className="background-shape star" style={{ top: "15%", left: "12%" }}></div>
-        <div className="background-shape star" style={{ top: "20%", left: "85%" }}></div>
+        <div className="background-shape star" style={{ top: "27%", left: "85%" }}></div>
         <div className="background-shape star" style={{ top: "28%", left: "8%" }}></div>
         <div className="background-shape star" style={{ top: "35%", left: "92%" }}></div>
         <div className="background-shape star" style={{ top: "42%", left: "10%" }}></div>
@@ -230,13 +230,13 @@ function App() {
             <li>Associate Reactive Developer – OutSystems</li>
           </ul>
         </section>
-        <h2>
+        <h3>
   Projects
   <span className="arrow-container">
     <span className="arrow arrow-left"></span>
     <span className="arrow arrow-right"></span>
   </span>
-  </h2>
+  </h3>
       </div>
 
       {/* Projects Section */}
