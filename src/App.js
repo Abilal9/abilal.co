@@ -18,7 +18,7 @@ function App() {
 
   const projects = [
     {
-      title: "Ministry of Economic Planning - Integrated information System for Social Support Benefit",
+      title: "Ministry of Economic Planning - IIS-SSB",
       description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
       duration: "January 2025 - Present",
       associatedWith: "Solutions by STC",

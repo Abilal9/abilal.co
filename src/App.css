@@ -184,6 +184,14 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);  /* Increase shadow for emphasis */
 }
 
+@media (max-width: 600px) {
+  .fade-section:hover {
+    transform: none !important;
+    background-color: #1f1f1f !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
 /* Reduce gap before projects */
 .fade-section:last-of-type {
   margin-bottom: 15px;
