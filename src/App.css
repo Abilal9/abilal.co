@@ -292,7 +292,7 @@ html, body {
 
 /* Scrollbar Track (Background) */
 ::-webkit-scrollbar {
-  width: 8px; /* Adjust scrollbar width */
+  width: 5px; /* Adjust scrollbar width */
 }
 
 /* Scrollbar Thumb (Draggable part) */
@@ -484,4 +484,22 @@ html, body {
   100% {
     transform: translateY(0) rotate(-45deg);
   }
+}
+
+.progress-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 9999;
+}
+
+.progress-indicator {
+  width: 25%;
+  background: linear-gradient(180deg, #e53935, #b71c1c); /* red gradient */
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); /* subtle red glow */
+  box-shadow: 0 0 12px rgba(255, 50, 50, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
 }

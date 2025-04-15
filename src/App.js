@@ -7,6 +7,7 @@ import mbrscLogo from './assets/logos/mbrsc_logo.jpeg';
 import tantumLogo from './assets/logos/tantum_logo.jpeg';
 import ausLogo from './assets/logos/aus_logo.jpeg';
 import ProfileFlip from './ProfileFlip'; 
+import ScrollProgressBar from "./ScrollProgressBar";
 
 
 function App() {
@@ -126,6 +127,7 @@ function App() {
 
   return (
     <div className="App">
+    <ScrollProgressBar />
       <div className="background-shapes">
         <div className="background-shape star" style={{ top: "5%", left: "5%" }}></div>
         <div className="background-shape star" style={{ top: "10%", left: "90%" }}></div>
