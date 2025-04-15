@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { useInView } from "react-intersection-observer";
 import ProjectSection from "./ProjectSection";
-import profilePic from "./assets/profile_pic.jpg";
 import stcsLogo from './assets/logos/stcs_logo.jpeg';
 import mbrscLogo from './assets/logos/mbrsc_logo.jpeg';
 import tantumLogo from './assets/logos/tantum_logo.jpeg';
@@ -18,6 +17,13 @@ function App() {
 
   const projects = [
     {
+      title: "Ministry of Economic Planning - Integrated information System for Social Support Benefit",
+      description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
+      duration: "January 2025 - Present",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
+    },
+    {
       title: "IMO - Ministers Communication Platform (MCP)",
       description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
       duration: "January 2024 - December 2024",
@@ -27,14 +33,14 @@ function App() {
     {
       title: "STC Cloud",
       description: "STC Cloud is Saudi Arabia's leading business cloud solution provider. It offers a range of cloud services that are reliable, flexible, and scalable to meet the needs of various businesses. The platform provides local data hosting with advanced Tier IV data centers located in Riyadh and Jeddah. These data centers are built, managed, and operated to ensure a high level of service availability, with a 99.99% uptime guarantee. The services offered by STC Cloud are designed to support businesses by providing them with the necessary cloud features at their own pace, ensuring data safety, security, and operational efficiency.",
-      duration: "August 2023 - December June 2024",
+      duration: "August 2023 - June 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "Insurance Authority",
       description: "Collaborated closely with client to understand and fulfill their needs and requirements, implementing fixes, improvements, and updates to the website. Additionally, responsible for deploying these changes on premises to ensure smooth implementation.",
-      duration: "January 2024 - February  2024",
+      duration: "January 2024 - February 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
@@ -53,7 +59,7 @@ function App() {
       logo: mbrscLogo,
     },
     {
-      title: "Financial Fraud Detection",
+      title: "Financial Tracking Mobile Application",
       description: "Used anomaly detection to identify suspicious transactions in real-time.",
       duration: "Nov 2019 - Jun 2020",
       associatedWith: "BankTech",
@@ -222,6 +228,13 @@ function App() {
             <li>Associate Reactive Developer – OutSystems</li>
           </ul>
         </section>
+        <h2>
+  Projects
+  <span className="arrow-container">
+    <span className="arrow arrow-left"></span>
+    <span className="arrow arrow-right"></span>
+  </span>
+  </h2>
       </div>
 
       {/* Projects Section */}

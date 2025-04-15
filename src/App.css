@@ -416,3 +416,72 @@ html, body {
     font-size: 0.9rem;
   }
 }
+
+.arrow-container {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid #e53935;
+  border-width: 0 3px 3px 0;
+  padding: 2px;
+  margin: 0 2px;
+  transform: rotate(45deg);
+  animation: arrow-bounce 1s infinite;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+.arrow-left {
+  animation: arrow-bounce-left 1.5s infinite;
+}
+
+.arrow-right {
+  animation: arrow-bounce-right 1.5s infinite;
+}
+
+@keyframes arrow-bounce-left {
+  0% {
+    transform: translateY(0) rotate(135deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(135deg);
+  }
+  100% {
+    transform: translateY(0) rotate(135deg);
+  }
+}
+
+@keyframes arrow-bounce-right {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
