@@ -6,9 +6,8 @@ import stcsLogo from './assets/logos/stcs_logo.jpeg';
 import mbrscLogo from './assets/logos/mbrsc_logo.jpeg';
 import tantumLogo from './assets/logos/tantum_logo.jpeg';
 import ausLogo from './assets/logos/aus_logo.jpeg';
-import ProfileFlip from './ProfileFlip'; 
+import ProfileFlip from './ProfileFlip';
 import ScrollProgressBar from "./ScrollProgressBar";
-
 
 function App() {
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -19,35 +18,35 @@ function App() {
   const projects = [
     {
       title: "Ministry of Economic Planning - IIS-SSB",
-      description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
+      description: "Integrated Information System for Social Support Benefit (IIS-SSB)...",
       duration: "January 2025 - Present",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "IMO - Ministers Communication Platform (MCP)",
-      description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
+      description: "A user-centric platform tailored to streamline external governmental communication...",
       duration: "January 2024 - December 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "STC Cloud",
-      description: "STC Cloud is Saudi Arabia's leading business cloud solution provider. It offers a range of cloud services that are reliable, flexible, and scalable to meet the needs of various businesses. The platform provides local data hosting with advanced Tier IV data centers located in Riyadh and Jeddah. These data centers are built, managed, and operated to ensure a high level of service availability, with a 99.99% uptime guarantee. The services offered by STC Cloud are designed to support businesses by providing them with the necessary cloud features at their own pace, ensuring data safety, security, and operational efficiency.",
+      description: "STC Cloud is Saudi Arabia's leading business cloud solution provider...",
       duration: "August 2023 - June 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "Insurance Authority",
-      description: "Collaborated closely with client to understand and fulfill their needs and requirements, implementing fixes, improvements, and updates to the website. Additionally, responsible for deploying these changes on premises to ensure smooth implementation.",
+      description: "Collaborated closely with client to understand and fulfill their needs...",
       duration: "January 2024 - February 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "Unity Dashboard",
-      description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform designed to streamline internal processes by providing a centralized interface for accessing employee, customer, and account information. The platform enables users to efficiently look up and manage detailed profiles, ensuring quick access to essential data for internal use.",
+      description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform...",
       duration: "August 2023 - January 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
@@ -104,7 +103,7 @@ function App() {
         shape.dataset.yFactor = (Math.random() - 0.5).toFixed(2);
       }
     });
-  
+
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -113,174 +112,163 @@ function App() {
           shapes.forEach((shape) => {
             const xFactor = parseFloat(shape.dataset.xFactor);
             const yFactor = parseFloat(shape.dataset.yFactor);
-            shape.style.transform = `translate(${ -scrollY * xFactor }px, ${ -scrollY * yFactor }px)`;
+            shape.style.transform = `translate(${-scrollY * xFactor}px, ${-scrollY * yFactor}px)`;
           });
           ticking = false;
         });
         ticking = true;
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="App">
-    <ScrollProgressBar />
+      <ScrollProgressBar />
+
+      {/* Background Shapes */}
       <div className="background-shapes">
-        <div className="background-shape star" style={{ top: "5%", left: "5%" }}></div>
-        <div className="background-shape star" style={{ top: "10%", left: "90%" }}></div>
-        <div className="background-shape star" style={{ top: "15%", left: "12%" }}></div>
-        <div className="background-shape star" style={{ top: "27%", left: "85%" }}></div>
-        <div className="background-shape star" style={{ top: "28%", left: "8%" }}></div>
-        <div className="background-shape star" style={{ top: "35%", left: "92%" }}></div>
-        <div className="background-shape star" style={{ top: "42%", left: "10%" }}></div>
-        <div className="background-shape star" style={{ top: "50%", left: "88%" }}></div>
-        <div className="background-shape star" style={{ top: "58%", left: "6%" }}></div>
-        <div className="background-shape star" style={{ top: "65%", left: "93%" }}></div>
-        <div className="background-shape star" style={{ top: "72%", left: "15%" }}></div>
-        <div className="background-shape star" style={{ top: "80%", left: "85%" }}></div>
-        <div className="background-shape star" style={{ top: "87%", left: "8%" }}></div>
-        <div className="background-shape star" style={{ top: "93%", left: "90%" }}></div>
-        <div className="background-shape star" style={{ top: "100%", left: "5%" }}></div>
-        <div className="background-shape star" style={{ top: "108%", left: "92%" }}></div>
-        <div className="background-shape star" style={{ top: "115%", left: "12%" }}></div>
-        <div className="background-shape star" style={{ top: "125%", left: "88%" }}></div>
+        {[
+          "5%", "10%", "12%", "27%", "28%", "35%", "42%", "50%", "58%", "65%", 
+          "72%", "80%", "87%", "93%", "100%", "108%", "115%", "125%"
+        ].map((top, idx) => (
+          <div
+            key={`star-${idx}`}
+            className="background-shape star"
+            style={{ top, left: idx % 2 === 0 ? "5%" : "90%" }}
+          />
+        ))}
       </div>
 
       <div className="background-shapes">
-        <div className="background-shape diamond" style={{ top: "5%", left: "5%" }}></div>
-        <div className="background-shape diamond" style={{ top: "10%", left: "90%" }}></div>
-        <div className="background-shape diamond" style={{ top: "15%", left: "12%" }}></div>
-        <div className="background-shape diamond" style={{ top: "27%", left: "85%" }}></div>
-        <div className="background-shape diamond" style={{ top: "28%", left: "8%" }}></div>
-        <div className="background-shape diamond" style={{ top: "35%", left: "92%" }}></div>
-        <div className="background-shape diamond" style={{ top: "42%", left: "10%" }}></div>
-        <div className="background-shape diamond" style={{ top: "50%", left: "88%" }}></div>
-        <div className="background-shape diamond" style={{ top: "58%", left: "6%" }}></div>
-        <div className="background-shape diamond" style={{ top: "65%", left: "93%" }}></div>
-        <div className="background-shape diamond" style={{ top: "72%", left: "15%" }}></div>
-        <div className="background-shape diamond" style={{ top: "80%", left: "85%" }}></div>
-        <div className="background-shape diamond" style={{ top: "87%", left: "8%" }}></div>
-        <div className="background-shape diamond" style={{ top: "93%", left: "90%" }}></div>
-        <div className="background-shape diamond" style={{ top: "100%", left: "5%" }}></div>
-        <div className="background-shape diamond" style={{ top: "108%", left: "92%" }}></div>
-        <div className="background-shape diamond" style={{ top: "115%", left: "12%" }}></div>
-        <div className="background-shape diamond" style={{ top: "125%", left: "88%" }}></div>
+        {[
+          "5%", "10%", "12%", "27%", "28%", "35%", "42%", "50%", "58%", "65%",
+          "72%", "80%", "87%", "93%", "100%", "108%", "115%", "125%"
+        ].map((top, idx) => (
+          <div
+            key={`diamond-${idx}`}
+            className="background-shape diamond"
+            style={{ top, left: idx % 2 === 0 ? "5%" : "90%" }}
+          />
+        ))}
       </div>
 
+      {/* Easter Egg */}
       <a href="#" className="easter-egg-link">Congrats you found the easter egg!</a>
-      
+
+      {/* Header */}
       <header className="App-header">
         <div className="profile-container">
-        <ProfileFlip />
+          <ProfileFlip />
           <div className="name-container">
             <h1 className="name">Ahmad Bilal</h1>
             <p className="title">Software Engineer & Developer</p>
             <div className="socials">
-              <p> 
-                <a href="tel:+966560900600"> +966 560 900 600 </a> |
-                <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer"> LinkedIn </a> |
-                <a href="mailto:ahmad.anas.ab@gmail.com"> ahmad.anas.ab@gmail.com </a>
+              <p>
+                <a href="tel:+966560900600">+966 560 900 600</a> |
+                <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer"> LinkedIn</a> |
+                <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
               </p>
             </div>
           </div>
         </div>
       </header>
 
+      {/* Main Content */}
       <div className="content-container">
-        {/* About Me Section */}
+        {/* About Me */}
         <section ref={aboutRef} className={`fade-section ${aboutInView ? "fade-in" : "fade-out"}`}>
           <h2>About Me</h2>
           <p>
-            As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices. Committed to continuous learning, I consistently seek new challenges to apply my technical expertise while meeting stakeholder needs and maintaining professional communication.
+            As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices...
           </p>
           <br />
           <p>
-            My work and academic experiences highlight strong teamwork and a passion for technology. I look forward to connecting with professionals and contributing to projects that make a positive impact.
+            My work and academic experiences highlight strong teamwork and a passion for technology...
           </p>
         </section>
 
-        {/* Education Section */}
+        {/* Education */}
         <section ref={educationRef} className={`fade-section ${educationInView ? "fade-in" : "fade-out"}`}>
           <h2>Education</h2>
           <ul>
-            <li><strong>Harvard Business School</strong> - Data Science for Business (November 2024 - January 2025)</li>
-            <li><strong>American University of Sharjah</strong> - Bachelor of Science in Computer Science (September 2018 - January 2023)</li>
+            <li><strong>Harvard Business School</strong> – Data Science for Business (Nov 2024 - Jan 2025)</li>
+            <li><strong>American University of Sharjah</strong> – BSc in Computer Science (Sep 2018 - Jan 2023)</li>
           </ul>
         </section>
 
-        {/* Experience Section */}
+        {/* Experience */}
         <section ref={experienceRef} className={`fade-section ${experienceInView ? "fade-in" : "fade-out"}`}>
           <h2>Experience</h2>
           <ul>
-            <li><strong>Software Developer</strong> - Solutions by STC</li>
-            <li><strong>AI Engineer</strong> - Mohammed Bin Rashed Space Centre</li>
-            <li><strong>Undergraduate Research Assistant (Data Analyst)</strong> - American University of Sharjah</li>
-            <li><strong>Writing Center Tutor</strong> - American University of Sharjah</li>
-            <li><strong>Junior Software Developer</strong> - Tantum Projects</li>
+            <li><strong>Software Developer</strong> – Solutions by STC</li>
+            <li><strong>AI Engineer</strong> – Mohammed Bin Rashed Space Centre</li>
+            <li><strong>Research Assistant (Data Analyst)</strong> – AUS</li>
+            <li><strong>Writing Center Tutor</strong> – AUS</li>
+            <li><strong>Junior Software Developer</strong> – Tantum Projects</li>
           </ul>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills */}
         <section ref={skillsRef} className={`fade-section ${skillsInView ? "fade-in" : "fade-out"}`}>
           <h2>Skills</h2>
           <ul>
-            <li><strong>Programming:</strong> Python, R, SQL, Java, JavaScript, OutSystems, C#, C++, MATLAB, C</li>
-            <li><strong>Data Science & Analysis:</strong> NLP, Computer Vision, Quantitative Analytics, SAS Enterprise Miner</li>
-            <li><strong>Development & Frameworks:</strong> Docker, Kubernetes, React, Django, DRF, Spring Boot, KillBill, Angular</li>
-            <li><strong>Cloud & DevOps:</strong> AWS, Azure, Terraform, CI/CD (Jenkins, GitHub Actions)</li>
-            <li><strong>APIs & Integration:</strong> REST, GraphQL, SOAP, gRPC, API Gateway</li>
-            <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis</li>
-            <li><strong>Productivity & Consulting Tools:</strong> Git, JIRA, Confluence, Power BI, Tableau</li>
-            <li><strong>Security:</strong> OWASP, IAM, SSO, OAuth</li>
+            <li><strong>Programming:</strong> Python, JavaScript, C++, etc.</li>
+            <li><strong>Data Science:</strong> NLP, CV, SAS Miner</li>
+            <li><strong>Frameworks:</strong> React, Django, Spring Boot</li>
+            <li><strong>DevOps:</strong> Docker, Kubernetes, Jenkins</li>
+            <li><strong>Cloud:</strong> AWS, Azure, Terraform</li>
+            <li><strong>APIs:</strong> REST, GraphQL, gRPC</li>
+            <li><strong>DBs:</strong> PostgreSQL, MongoDB, Redis</li>
+            <li><strong>Security:</strong> OWASP, IAM, SSO</li>
           </ul>
         </section>
 
-        {/* Certifications Section */}
+        {/* Certifications */}
         <section className="fade-section">
           <h2>Certifications</h2>
           <ul>
-            <li>Certified SAFe 6 Agilist – Scaled Agile, Inc.</li>
+            <li>Certified SAFe 6 Agilist</li>
             <li>AI Security & Governance – Securiti</li>
             <li>Professional Web Developer – OutSystems</li>
-            <li>Web Developer Specialist – OutSystems</li>
-            <li>Architecture Specialist – OutSystems</li>
-            <li>Security Specialist – OutSystems</li>
+            <li>Security & Architecture Specialist – OutSystems</li>
             <li>Associate Reactive Developer – OutSystems</li>
           </ul>
         </section>
+
+        {/* Projects Title */}
         <h3>
-  Projects
-  <span className="arrow-container">
-    <span className="arrow arrow-left"></span>
-    <span className="arrow arrow-right"></span>
-  </span>
-  </h3>
+          Projects
+          <span className="arrow-container">
+            <span className="arrow arrow-left"></span>
+            <span className="arrow arrow-right"></span>
+          </span>
+        </h3>
       </div>
 
-      {/* Projects Section */}
+      {/* Projects List */}
       {projects.map((project, index) => (
-  <ProjectSection
-    key={index}
-    title={project.title}
-    description={project.description}
-    duration={project.duration}
-    company={project.associatedWith}
-    logo={project.logo}
-  />
-))}
+        <ProjectSection
+          key={index}
+          title={project.title}
+          description={project.description}
+          duration={project.duration}
+          company={project.associatedWith}
+          logo={project.logo}
+        />
+      ))}
 
       {/* Footer */}
       <footer>
-  <p><strong>Contact</strong></p>
-  <div className="footer-links">
-     <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-     <a href="tel:+966560900600">+966 560 900 600</a>
-     <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
-  </div>
-</footer>
+        <p><strong>Contact</strong></p>
+        <div className="footer-links">
+          <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+966560900600">+966 560 900 600</a>
+          <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
+        </div>
+      </footer>
     </div>
   );
 }
