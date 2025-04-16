@@ -484,13 +484,13 @@ html, body {
   position: fixed;
   top: 0; 
   left: 0;
-  width: 8px;
+  width: 10px;
   height: 100vh;
   z-index: 9999;
 }
 
 .progress-indicator {
-  width: 40%;
+  width: 50%;
   background: linear-gradient(180deg, #2C2C2C , #777777);
   border-radius: 0 4px 4px 0;
   box-shadow: 0 0 8px rgba(196, 194, 194, 0.5), 0 0 12px rgba(131, 130, 130, 0.8), 0 0 20px rgba(120, 118, 118, 0.6);
