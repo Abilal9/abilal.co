@@ -149,6 +149,27 @@ function App() {
         <div className="background-shape star" style={{ top: "125%", left: "88%" }}></div>
       </div>
 
+      <div className="background-shapes">
+        <div className="background-shape diamond" style={{ top: "5%", left: "5%" }}></div>
+        <div className="background-shape diamond" style={{ top: "10%", left: "90%" }}></div>
+        <div className="background-shape diamond" style={{ top: "15%", left: "12%" }}></div>
+        <div className="background-shape diamond" style={{ top: "27%", left: "85%" }}></div>
+        <div className="background-shape diamond" style={{ top: "28%", left: "8%" }}></div>
+        <div className="background-shape diamond" style={{ top: "35%", left: "92%" }}></div>
+        <div className="background-shape diamond" style={{ top: "42%", left: "10%" }}></div>
+        <div className="background-shape diamond" style={{ top: "50%", left: "88%" }}></div>
+        <div className="background-shape diamond" style={{ top: "58%", left: "6%" }}></div>
+        <div className="background-shape diamond" style={{ top: "65%", left: "93%" }}></div>
+        <div className="background-shape diamond" style={{ top: "72%", left: "15%" }}></div>
+        <div className="background-shape diamond" style={{ top: "80%", left: "85%" }}></div>
+        <div className="background-shape diamond" style={{ top: "87%", left: "8%" }}></div>
+        <div className="background-shape diamond" style={{ top: "93%", left: "90%" }}></div>
+        <div className="background-shape diamond" style={{ top: "100%", left: "5%" }}></div>
+        <div className="background-shape diamond" style={{ top: "108%", left: "92%" }}></div>
+        <div className="background-shape diamond" style={{ top: "115%", left: "12%" }}></div>
+        <div className="background-shape diamond" style={{ top: "125%", left: "88%" }}></div>
+      </div>
+
       <a href="#" className="easter-egg-link">Congrats you found the easter egg!</a>
       
       <header className="App-header">

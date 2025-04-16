@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.css'; // Import CSS file for styling
+import React, { useState, useEffect } from 'react';
+import './App.css';
 import profilePic from "./assets/profile_pic.jpg";
 import profilePic2 from "./assets/profile_pic_2.jpg";
 
@@ -7,13 +7,20 @@ const ProfileFlip = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
-    setIsFlipped(prevState => !prevState); // Toggle the flipped state on click
+    setIsFlipped(prev => !prev);
   };
+
+  useEffect(() => {
+    if (isFlipped) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isFlipped]);
 
   return (
     <div className="profile-container" onClick={handleClick}>
       <div className={`profile-img ${isFlipped ? 'flipped' : ''}`}>
-        {/* Show profile_pic1 by default, then profile_pic2 after flip */}
         <img
           src={isFlipped ? profilePic2 : profilePic}
           alt="Profile"
