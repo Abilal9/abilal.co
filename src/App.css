@@ -78,7 +78,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #2C2C2C ;
-  transition: transform 1s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 .profile-img.flipped {
-  transform: rotateY(540deg);
+  transform: rotateY(180deg);
 }
 
 .name-container {
