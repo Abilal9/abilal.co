@@ -122,6 +122,17 @@ body {
   }
 }
 
+.extra-info {
+  margin-top: 0.5rem;
+  color: #2C2C2C;
+}
+
+@media (max-width: 600px) {
+  .extra-info {
+    text-align: center;
+  }
+}
+
 .socials {
   margin-top: 10px;
   text-align: left;
@@ -132,7 +143,12 @@ body {
 @media (max-width: 600px) {
   .socials {
     text-align: center;
+    font-size: 0.5rem;
   }
+}
+
+.separator {
+  color: #2C2C2C;
 }
 
 .socials p {
@@ -213,6 +229,7 @@ h3 {
   border-bottom: 3px solid #2C2C2C ;
   display: inline-block;
   padding-bottom: 5px;
+  padding-top: 150px;
 }
 
 p, ul {

@@ -14,39 +14,40 @@ function App() {
   const { ref: skillsRef, inView: skillsInView } = useInView({ triggerOnce: false, threshold: 0.3 });
   const { ref: experienceRef, inView: experienceInView } = useInView({ triggerOnce: false, threshold: 0.3 });
   const { ref: educationRef, inView: educationInView } = useInView({ triggerOnce: false, threshold: 0.3 });
+  const { ref: certificationsRef, inView: certificationsInView } = useInView({ triggerOnce: false, threshold: 0.3 });
 
   const projects = [
     {
       title: "Ministry of Economic Planning - IIS-SSB",
-      description: "Integrated Information System for Social Support Benefit (IIS-SSB)...",
+      description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
       duration: "January 2025 - Present",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "IMO - Ministers Communication Platform (MCP)",
-      description: "A user-centric platform tailored to streamline external governmental communication...",
+      description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
       duration: "January 2024 - December 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "STC Cloud",
-      description: "STC Cloud is Saudi Arabia's leading business cloud solution provider...",
+      description: "STC Cloud is Saudi Arabia's leading business cloud solution provider. It offers a range of cloud services that are reliable, flexible, and scalable to meet the needs of various businesses. The platform provides local data hosting with advanced Tier IV data centers located in Riyadh and Jeddah. These data centers are built, managed, and operated to ensure a high level of service availability, with a 99.99% uptime guarantee. The services offered by STC Cloud are designed to support businesses by providing them with the necessary cloud features at their own pace, ensuring data safety, security, and operational efficiency.",
       duration: "August 2023 - June 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "Insurance Authority",
-      description: "Collaborated closely with client to understand and fulfill their needs...",
+      description: "Collaborated closely with client to understand and fulfill their needs and requirements, implementing fixes, improvements, and updates to the website. Additionally, responsible for deploying these changes on premises to ensure smooth implementation.",
       duration: "January 2024 - February 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
     },
     {
       title: "Unity Dashboard",
-      description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform...",
+      description: "Unity Dashboard is a comprehensive Single Sign-On (SSO) platform designed to streamline internal processes by providing a centralized interface for accessing employee, customer, and account information. The platform enables users to efficiently look up and manage detailed profiles, ensuring quick access to essential data for internal use.",
       duration: "August 2023 - January 2024",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
@@ -165,11 +166,16 @@ function App() {
           <div className="name-container">
             <h1 className="name">Ahmad Bilal</h1>
             <p className="title">Software Engineer & Developer</p>
+            <p className="extra-info">
+              <span role="img" aria-label="location">📍</span> Riyadh, KSA &nbsp; - &nbsp; Nationality: Irish
+              </p>
+            {/* TODO: Fix this display on mobile */}
             <div className="socials">
               <p>
                 <a href="tel:+966560900600">+966 560 900 600</a> |
                 <a href="https://www.linkedin.com/in/ahmadanasbilal" target="_blank" rel="noopener noreferrer"> LinkedIn</a> |
-                <a href="mailto:ahmad.anas.ab@gmail.com">ahmad.anas.ab@gmail.com</a>
+                <a href="mailto:ahmad.anas.ab@gmail.com"> ahmad.anas.ab@gmail.com</a>  |
+                <a  href="./Ahmad_Bilal_CV.pdf" download="Ahmad_Bilal_CV.pdf" rel="noopener noreferrer"> Resume</a>
               </p>
             </div>
           </div>
@@ -182,12 +188,10 @@ function App() {
         <section ref={aboutRef} className={`fade-section ${aboutInView ? "fade-in" : "fade-out"}`}>
           <h2>About Me</h2>
           <p>
-            As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices...
-          </p>
+          As a software developer, I excel in problem-solving, analytical thinking, and implementing best practices. Committed to continuous learning, I consistently seek new challenges to apply my technical expertise while meeting stakeholder needs and maintaining professional communication.          </p>
           <br />
           <p>
-            My work and academic experiences highlight strong teamwork and a passion for technology...
-          </p>
+          My work and academic experiences highlight strong teamwork and a passion for technology. I look forward to connecting with professionals and contributing to projects that make a positive impact.          </p>
         </section>
 
         {/* Education */}
@@ -205,8 +209,8 @@ function App() {
           <ul>
             <li><strong>Software Developer</strong> – Solutions by STC</li>
             <li><strong>AI Engineer</strong> – Mohammed Bin Rashed Space Centre</li>
-            <li><strong>Research Assistant (Data Analyst)</strong> – AUS</li>
-            <li><strong>Writing Center Tutor</strong> – AUS</li>
+            <li><strong>Undergraduate Research Assistant (Data Analyst)</strong> – Amereican University of Sharjah</li>
+            <li><strong>Writing Center Tutor</strong> – Amereican University of Sharjah</li>
             <li><strong>Junior Software Developer</strong> – Tantum Projects</li>
           </ul>
         </section>
@@ -215,25 +219,28 @@ function App() {
         <section ref={skillsRef} className={`fade-section ${skillsInView ? "fade-in" : "fade-out"}`}>
           <h2>Skills</h2>
           <ul>
-            <li><strong>Programming:</strong> Python, JavaScript, C++, etc.</li>
-            <li><strong>Data Science:</strong> NLP, CV, SAS Miner</li>
-            <li><strong>Frameworks:</strong> React, Django, Spring Boot</li>
+            <li><strong>Programming:</strong> Python, R, SQL, Java, JavaScript, OutSystems, C#, C++, MATLAB, C</li>
+            <li><strong>Data Science:</strong> NLP, Computer Vision, Quantitative Analytics, SAS Enterprise Miner</li>
+            <li><strong>Frameworks:</strong> Docker, Kubernetes, React, Django, DRF, Spring Boot, KillBill, Angular</li>
             <li><strong>DevOps:</strong> Docker, Kubernetes, Jenkins</li>
             <li><strong>Cloud:</strong> AWS, Azure, Terraform</li>
-            <li><strong>APIs:</strong> REST, GraphQL, gRPC</li>
-            <li><strong>DBs:</strong> PostgreSQL, MongoDB, Redis</li>
-            <li><strong>Security:</strong> OWASP, IAM, SSO</li>
+            <li><strong>APIs:</strong> REST, GraphQL, gRPC </li>
+            <li><strong>DBs:</strong> PostgreSQL, MongoDB, Redis, MySQL</li>
+            <li><strong>Security:</strong> OWASP, IAM, SSO, OAuth</li>
+            <li><strong>Productivity & Consulting Tools:</strong> Git, JIRA, Confluence, Power BI, Tableau</li>
           </ul>
         </section>
 
         {/* Certifications */}
-        <section className="fade-section">
+        <section ref={certificationsRef} className={`fade-section ${certificationsInView ? "fade-in" : "fade-out"}`}>
           <h2>Certifications</h2>
           <ul>
-            <li>Certified SAFe 6 Agilist</li>
+            <li>Certified SAFe 6 Agilist – Scaled Agile, Inc.</li>
             <li>AI Security & Governance – Securiti</li>
             <li>Professional Web Developer – OutSystems</li>
-            <li>Security & Architecture Specialist – OutSystems</li>
+            <li>Web Developer Specialist – OutSystems</li>
+            <li>Architecture Specialist – OutSystems</li>
+            <li>Security Specialist – OutSystems</li>
             <li>Associate Reactive Developer – OutSystems</li>
           </ul>
         </section>
