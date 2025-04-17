@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-const ProjectSection = ({ title, description, duration, company, logo }) => {
+const ProjectSection = ({ title, description, duration, role, company, logo }) => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.3 });
   const [expanded, setExpanded] = useState(false);
 
@@ -15,8 +15,9 @@ const ProjectSection = ({ title, description, duration, company, logo }) => {
       <p className="project-description">{description}</p>
       <div className="project-details">
         <p><strong>Duration:</strong> {duration}</p>
+        <p><strong>Role:</strong> {role}</p>
         <p><strong>Associated with:</strong> {company}</p>
-        <img src={logo} alt={`${company} logo`} className="project-logo" />
+        {logo && (<img src={logo} alt={`${company} logo`} className="project-logo" />)}
       </div>
     </section>
   );

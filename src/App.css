@@ -517,7 +517,7 @@ html, body {
   width: 50%;
   background: linear-gradient(180deg, #2C2C2C , #777777);
   border-radius: 0 4px 4px 0;
-  box-shadow: 0 0 8px rgba(196, 194, 194, 0.5), 0 0 12px rgba(131, 130, 130, 0.8), 0 0 20px rgba(120, 118, 118, 0.6);
+  box-shadow: 0 0 8px rgba(196, 194, 194, 0.5), 0 0 5px rgba(131, 130, 130, 0.8), 0 0 5px rgba(120, 118, 118, 0.6);
 }
 
 * {
@@ -565,7 +565,7 @@ body.dark-mode .arrow {
 
 body.dark-mode .progress-indicator {
   background: linear-gradient(180deg, #FF5A5F, #FF5A5F);
-  box-shadow: 0 0 8px rgba(255, 165, 165, 0.5), 0 0 12px rgba(235, 130, 130, 0.8), 0 0 20px rgba(253, 133, 133, 0.6);
+  box-shadow: 0 0 8px rgba(255, 165, 165, 0.5), 0 0 5px rgba(235, 130, 130, 0.8), 0 0 5px rgba(253, 133, 133, 0.6);
 
 }
 
@@ -607,4 +607,15 @@ body.dark-mode .background-shape.diamond {
   background-color: transparent; 
   opacity: 0;
   transition: opacity 0.3s ease-out, background-color 1s ease-out;
+}
+
+.hover-highlight {
+  color: #2C2C2C; 
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.hover-highlight:hover {
+  color: #FF5A5F;
+  text-decoration: underline;
 }
