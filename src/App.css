@@ -554,6 +554,10 @@ body.dark-mode footer p {
   color: #FFF;
 }
 
+.dark-mode ul li::before {
+  color: #FF5A5F;
+}
+
 body.dark-mode .socials a:hover,
 body.dark-mode .footer-links a:hover {
   color: #FF5A5F;
@@ -610,12 +614,16 @@ body.dark-mode .background-shape.diamond {
 }
 
 .hover-highlight {
-  color: #2C2C2C; 
+  color: #fffff0; 
   text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.1s ease, text-decoration 0.1s ease;
 }
 
 .hover-highlight:hover {
-  color: #FF5A5F;
+  color: #e0e0e0;
   text-decoration: underline;
+}
+
+.dark-mode .hover-highlight:hover {
+  color: #FF5A5F;
 }

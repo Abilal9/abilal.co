@@ -221,8 +221,24 @@ function App() {
         <section ref={educationRef} className={`fade-section ${educationInView ? "fade-in" : "fade-out"}`}>
           <h2>Education</h2>
           <ul>
-            <li><strong>Harvard Business School</strong> – Data Science for Business (Nov 2024 - Jan 2025)</li>
-            <li><strong>American University of Sharjah</strong> – BSc in Computer Science (Sep 2018 - Jan 2023)</li>
+            <li>  
+              <a
+              href="https://www.hbs.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight">
+                <strong>Harvard Business School</strong> – Data Science for Business (Nov 2024 - Jan 2025)
+              </a>
+            </li>
+            <li>  
+              <a
+              href="https://www.aus.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight">
+                <strong>American University of Sharjah</strong> – BSc in Computer Science (Sep 2018 - Jan 2023)
+              </a>
+            </li>
           </ul>
         </section>
         
@@ -231,11 +247,56 @@ function App() {
         <section ref={experienceRef} className={`fade-section ${experienceInView ? "fade-in" : "fade-out"}`}>
           <h2>Experience</h2>
           <ul>
-            <li><strong>Software Developer</strong> – Solutions by STC</li>
-            <li><strong>AI Engineer</strong> – Mohammed Bin Rashed Space Centre</li>
-            <li><strong>Undergraduate Research Assistant (Data Analyst)</strong> – Amereican University of Sharjah</li>
-            <li><strong>Junior Software Developer</strong> – Tantum Projects</li>
-            <li><strong>Writing Center Tutor</strong> – Amereican University of Sharjah</li>
+          <li>
+            <a
+              href="https://solutions.com.sa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight"
+            >
+              <strong>Software Developer</strong> – Solutions by STC (Aug 2023 - Present)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.mbrsc.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight"
+            >
+              <strong>AI Engineer</strong> – Mohammed Bin Rashed Space Centre (Jan 2022 - Jan 2023)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.aus.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight"
+            >
+              <strong>Undergraduate Research Assistant (Data Analyst)</strong> – Amereican University of Sharjah (Sep 2021 - Jan 2023)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/tantum-projects-it-solutions-outsourcing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight"
+            >
+              <strong>Junior Software Developer</strong> – Tantum Projects (Jul 2021 - Jul 2022)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.aus.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-highlight"
+            >
+              <strong>Writing Center Tutor</strong> – Amereican University of Sharjah (Sep 2020 - Jan 2023)
+            </a>
+          </li>
           </ul>
         </section>
 
