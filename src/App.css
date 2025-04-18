@@ -3,7 +3,52 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 600px) {
+  html {
+    font-size: 14px; /* Default is 16px, reducing globally */
+  }
 
+  body {
+    padding: 10px 5px;
+  }
+
+  .content-container {
+    padding: 0 5px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2, h3 {
+    font-size: 1.1rem;
+  }
+
+  p, ul li, .title, .name, .socials p, .socials a, footer p {
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .project-section {
+    padding: 10px 10px;
+  }
+
+  .project-section.expanded {
+    padding: 20px 15px;
+  }
+
+  .project-logo {
+    width: 80px;
+  }
+}
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fffff0;
