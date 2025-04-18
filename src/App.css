@@ -435,6 +435,16 @@ html, body {
   }
 }
 
+.project-label {
+  color: #fffff0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.dark-mode .project-label {
+  color: #FF5A5F;
+}
+
 .arrow-container {
   display: inline-block;
   margin-left: 10px;
@@ -626,4 +636,35 @@ body.dark-mode .background-shape.diamond {
 
 .dark-mode .hover-highlight:hover {
   color: #FF5A5F;
+}
+
+.project-section {
+  max-height: 120px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  padding: 25px 25px 15px 25px;
+}
+
+.project-section.expanded {
+  padding: 30px 30px 30px 30px;
+  max-height: 800px;
+}
+
+.project-section h2 {
+  margin-bottom: 10px;
+}
+
+.project-description {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.project-details p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.project-logo {
+  margin-top: 10px;
 }

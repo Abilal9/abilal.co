@@ -16,11 +16,9 @@ function App() {
   const { ref: educationRef, inView: educationInView } = useInView({ triggerOnce: false, threshold: 0.3 });
   const { ref: certificationsRef, inView: certificationsInView } = useInView({ triggerOnce: false, threshold: 0.3 });
 
-  {/* TODO:Add Tantum Projects & finalize*/}
-  {/* TODO:Add Rachel Buck Project*/}
   const projects = [
     {
-      title: "Ministry of Economic Planning - IIS-SSB",
+      title: "Ministry of Economic Planning – IIS-SSB",
       description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
       duration: "January 2025 - Present",
       role: "DevOps Engineer",
@@ -28,8 +26,8 @@ function App() {
       logo: stcsLogo,
     },
     {
-      title: "IMO - Ministers Communication Platform (MCP)",
-      description: "A user-centric platform tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
+      title: "IMO – Ministers Communication Platform (MCP)",
+      description: "A user-centric platform for the Initiatives and Missions Affairs Office (IMO) tailored to streamline external governmental communication by utilizing data analytics and artificial intelligence. Emphasizing data privacy and confidentiality. As well as, providing a single source of truth to facilitate knowledge enrichment and delegation processes among government leadership.",
       duration: "January 2024 - December 2024",
       role: "Software Developer",
       associatedWith: "Solutions by STC",
@@ -61,54 +59,62 @@ function App() {
     },
     {
       title: "Road Segmentation with Deep Learning",
-      description: "Built a deep neural network for segmenting roads in satellite images.",
+      description: "This project developed a Deep Neural Network for road extraction in collaboration with MBRSC engineers, leveraging variations of the U-Net architecture. A novel dataset was created using high-resolution satellite images of the UAE from KhalifaSat, with a 300% data augmentation for improved training, validation, and testing. Three models were compared, all achieving over 98% accuracy. The project provided actionable AI insights for urban planning optimization and facilitated data-driven decision-making by aligning technical and business strategies.",
       duration: "Jul 2020 - Jan 2021",
       role: "Software Developer",
       associatedWith: "Mohammed bin Rashed Space Centre",
       logo: mbrscLogo,
     },
     {
-      title: "Financial Tracking Mobile Application",
-      description: "Used anomaly detection to identify suspicious transactions in real-time.",
+      title: "HabitSync – Productivity Mobile App",
+      description: "Created a cross-platform mobile productivity and habit-tracking app using React Native and Firebase (Firestore, Auth, Cloud Functions). Features included real-time syncing, custom habit reminders, analytics, and a clean user interface with dark mode support. Integrated Google/Apple sign-in, Redux for state management, and deployed via Expo EAS with CI/CD pipelines and web support through Firebase Hosting.",
       duration: "Nov 2019 - Jun 2020",
       role: "Software Developer",
-      associatedWith: "BankTech",
+      associatedWith: "Tantum Projects",
       logo: tantumLogo,
     },
     {
-      title: "OutSystems Automation Tool",
-      description: "Built an internal automation tool to speed up OutSystems deployments.",
+      title: "CI/CD Monitoring Dashboard",
+      description: "Built a DevOps monitoring tool for continuous integration and delivery pipelines using Python (FastAPI) and Vue.js. Aggregated logs and build events from Jenkins, GitHub Actions, and GitLab. Integrated with Prometheus, Grafana, Jira, and Slack for full visibility and alerting. Automated deployment with Terraform and Ansible on Azure Cloud, providing seamless observability and incident tracking across development pipelines.",
       duration: "Aug 2019 - Oct 2019",
       role: "Software Developer",
-      associatedWith: "OutSystems Partner Co.",
+      associatedWith: "Tantum Projects",
       logo: tantumLogo,
     },
     {
-      title: "Kubernetes Resource Visualizer",
-      description: "Developed a UI for visualizing and managing K8s clusters.",
+      title: "Cloud-Native Incident Management System",
+      description: "Developed a full-stack, cloud-native incident management platform enabling IT teams to monitor, log, and respond to infrastructure issues in real time. Utilized Node.js and Express for the backend, Kafka for log streaming, and MongoDB for storage. Deployed using Docker and Kubernetes on Google Cloud (GKE) and integrated with Slack and email APIs for alerting. Included real-time dashboards and analytics to support efficient team coordination.",
       duration: "Mar 2019 - Jul 2019",
       role: "Software Developer",
-      associatedWith: "DevOps HQ",
+      associatedWith: "Tantum Projects",
       logo: tantumLogo,
     },
     {
-      title: "Cybersecurity Threat Dashboard",
-      description: "Created a live dashboard to visualize threat levels and alerts.",
+      title: "Productivity Portal for Workflow Optimization",
+      description: "Developed a full-stack productivity tool tailored to a client’s workflow using React, Django REST Framework, and PostgreSQL. Deployed via Docker and Kubernetes on AWS (EC2, S3, RDS) with CI/CD pipelines using Jenkins and GitHub Actions. Included secure authentication, role-based access, WebSockets for real-time updates, and built-in analytics to enhance collaboration, transparency, and efficiency.",
       duration: "Dec 2018 - Feb 2019",
       role: "Software Developer",
-      associatedWith: "RedShield Security",
+      associatedWith: "Tantum Projects",
       logo: tantumLogo,
     },
     {
-      title: "Fitness Tracker App",
-      description: "Designed a mobile app to log workouts and track fitness goals.",
+      title: "Code-Switching Analysis in Multilingual Student Communication",
+      description: "Conducted a data-driven analysis of code-switching behavior among multilingual students, focusing on frequency, context, and triggers of language switching during communication. Responsible for collecting, cleaning, and structuring raw linguistic data, followed by applying statistical and data science techniques to uncover meaningful patterns and correlations. The project aimed to provide insights into when and why students switch languages, contributing to a deeper understanding of multilingual interaction dynamics in academic settings.",
       duration: "September 2021 - January 2023",
       role: "Data Analyst",
       associatedWith: "American University of Sharjah",
       logo: ausLogo,
     },
     {
-      title: "Confidential",
+      title: "Writing Center Tutoring",
+      description: "Completed specialized training to become a certified writing tutor, mastering academic and professional writing standards. Assisted students at various academic levels, from freshmen to PhD candidates, in improving their writing skills for academic papers, theses, and professional documents. Provided personalized feedback on grammar, structure, style, and tone to enhance clarity and effectiveness. Collaborated with faculty to develop writing resources and promote best practices. Managed the Writing Center website, overseeing session bookings and ensuring smooth operations, while also resolving IT issues and maintaining technical infrastructure for tutoring and scheduling.",
+      duration: "September 2020 - January 2023",
+      role: "Professional Writing Tutor / IT Coordinator",
+      associatedWith: "American University of Sharjah",
+      logo: ausLogo,
+    },
+    {
+      title: "Confidential Project",
       description: "Currently developing and launching a tech startup",
       duration: "March 2025 - Present",
       role: "CEO & Founder",
@@ -242,7 +248,6 @@ function App() {
           </ul>
         </section>
         
-        {/* TODO: Add hyper links for actual companies along with working dates & logos*/}
         {/* Experience */}
         <section ref={experienceRef} className={`fade-section ${experienceInView ? "fade-in" : "fade-out"}`}>
           <h2>Experience</h2>
@@ -340,7 +345,6 @@ function App() {
         </h3>
       </div>
       
-      {/* TODO: Add role section to indicate what I did on the project*/}
       {/* Projects List */}
       {projects.map((project, index) => (
         <ProjectSection
