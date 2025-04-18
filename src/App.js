@@ -196,7 +196,6 @@ function App() {
             <p className="extra-info">
               <span role="img" aria-label="location">📍</span> Riyadh, KSA &nbsp; - &nbsp; Nationality: Irish
               </p>
-            {/* TODO: Fix this display on mobile */}
             <div className="socials">
               <p>
                 <a href="tel:+966560900600">+966 560 900 600</a> |
