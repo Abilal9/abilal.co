@@ -3,11 +3,14 @@ import './App.css';
 import profilePic from "./assets/profile_pic.jpg";
 import profilePic2 from "./assets/profile_pic_2.jpg";
 
-const ProfileFlip = () => {
+const ProfileFlip = ({ onProfileClick }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
     setIsFlipped(prev => !prev);
+    if (onProfileClick) {
+      onProfileClick();
+    }
   };
 
   useEffect(() => {

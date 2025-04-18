@@ -8,6 +8,7 @@ import tantumLogo from './assets/logos/tantum_logo.jpeg';
 import ausLogo from './assets/logos/aus_logo.jpeg';
 import ProfileFlip from './ProfileFlip';
 import ScrollProgressBar from "./ScrollProgressBar";
+import ParentComponent from "./ParentComponent";
 
 function App() {
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -188,8 +189,7 @@ function App() {
       {/* Header */}
       <header className="App-header">
         <div className="profile-container">
-          <ProfileFlip />
-          {/* TODO: Add speech bubble */}
+        <ParentComponent />
           <div className="name-container">
             <h1 className="name">Ahmad Bilal</h1>
             <p className="title">Software Engineer & Developer</p>

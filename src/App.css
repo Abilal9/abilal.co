@@ -19,6 +19,7 @@
   .profile-img {
     width: 100px;
     height: 100px;
+    position: relative;
   }
 
   h2, h3 {
@@ -94,6 +95,7 @@ body {
   .profile-container {
     flex-direction: column;
     gap: 10px;
+    position: relative;
   }
 
   .profile-img {
@@ -720,4 +722,44 @@ body.dark-mode .background-shape.diamond {
 
 .project-logo {
   margin-top: 10px;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: -10px;
+  left: -120px;
+  background-color: #777777;
+  color: #333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  display: none; 
+  animation: fadeIn 0.7s forwards;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .speech-bubble {
+    bottom: 50%;      
+    left: 50%;          
+    transform: translateX(-50%);
+    padding: 12px 18px;
+    font-size: 10px;
+  }
+}
+
+.speech-bubble.visible {
+  display: block; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
