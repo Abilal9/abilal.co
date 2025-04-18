@@ -5,7 +5,7 @@
 }
 @media (max-width: 600px) {
   html {
-    font-size: 14px; /* Default is 16px, reducing globally */
+    font-size: 14px; 
   }
 
   body {
