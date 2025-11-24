@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import profilePic from "./assets/profile_pic.jpg";
 import profilePic2 from "./assets/profile_pic_2.jpg";
 
-const ProfileFlip = ({ onProfileClick }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => {
-    setIsFlipped(prev => !prev);
-    if (onProfileClick) {
-      onProfileClick();
-    }
-  };
-
-  useEffect(() => {
-    if (isFlipped) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isFlipped]);
-
+const ProfileFlip = ({ isFlipped, onProfileClick }) => {
   return (
-    <div className="profile-container" onClick={handleClick}>
+    <div className="profile-img-wrapper" onClick={onProfileClick}>
       <div className={`profile-img ${isFlipped ? 'flipped' : ''}`}>
         <img
           src={isFlipped ? profilePic2 : profilePic}

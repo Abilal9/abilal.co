@@ -9,6 +9,8 @@ import ausLogo from './assets/logos/aus_logo.jpeg';
 import ProfileFlip from './ProfileFlip';
 import ScrollProgressBar from "./ScrollProgressBar";
 import ParentComponent from "./ParentComponent";
+import MapWidget from "./MapWidget";
+import BackToTop from "./BackToTop";
 
 function App() {
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -19,9 +21,41 @@ function App() {
 
   const projects = [
     {
+      title: "SERA E-Services Portal",
+      description: "The SERA E-Services Platform delivers a centralized digital hub for managing complaints, licensing requests, and customer interactions within Saudi Arabia's electricity sector. The system standardizes service workflows, improves processing efficiency, and ensures transparent, reliable service delivery aligned with national digital government standards.",
+      duration: "November 2025 - Present",
+      role: "Lead Developer",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
+    },
+    {
+      title: "SDAIA Dashboard - Reporting & Visualization Platform",
+      description: "Developed a secure, self-hosted reporting platform for SDAIA's Government Web Services dashboards, enabling real-time data integration, drag-and-drop report design, and customizable multi-page layouts. The solution supports automated PDF, Excel, and CSV exports, scheduled delivery via secure channels, and full branding customization with headers, footers, and watermarks. Implemented role-based access controls and encryption to ensure compliance with government security standards, streamlining the reporting process and improving information sharing across departments.",
+      duration: "July 2025 - November 2025",
+      role: "Lead Developer",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
+    },
+    {
+      title: "Human Resource Development Fund - Unified Data Environment",
+      description: "This project aims to design and implement a Unified Data Environment (UDE) that consolidates data sources across the organization into a single, coherent infrastructure. The goal is to enable seamless data integration, management, accessibility, and analysis by breaking down data silos and establishing a centralized platform for both operational and analytical needs.",
+      duration: "May 2025 - October 2025",
+      role: "Technical Lead",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
+    },
+    {
+      title: "General Authority for Military Industries - GAMI Task Force",
+      description: "The GAMI Task Force Communication Portal is a dedicated initiative by the General Authority for Military Industries (GAMI) to streamline communication, coordination, and collaboration among various internal teams and external partners involved in military industry development.",
+      duration: "March 2025 - September 2025",
+      role: "Lead Developer",
+      associatedWith: "Solutions by STC",
+      logo: stcsLogo,
+    },
+    {
       title: "Ministry of Economic Planning – IIS-SSB",
       description: "Integrated Information System for Social Support Benefit (IIS-SSB) system provide a way of facilitating and managing various programs, standardizing, and implementing subsidy processes, providing access to subsidy programs for the poor or targeted segments, improving efficiency and effectiveness through effective coordination of all social assistance programs, and ensuring that services and benefits are provided in a transparent and accountable manner. Therefore, the IIS-SSB solution will be the main enabler for the development of Saudi Arabia's social support and protection system.",
-      duration: "January 2025 - Present",
+      duration: "January 2025 - August 2025",
       role: "DevOps Engineer",
       associatedWith: "Solutions by STC",
       logo: stcsLogo,
@@ -119,7 +153,7 @@ function App() {
       description: "Currently developing and launching a tech startup",
       duration: "March 2025 - Present",
       role: "CEO & Founder",
-      associatedWith: "Confidental",
+      associatedWith: "Confidential",
     }
   ];
 
@@ -155,6 +189,7 @@ function App() {
   return (
     <div className="App">
       <ScrollProgressBar />
+      <BackToTop />
 
       {/* Background Shapes */}
       <div className="background-shapes">
@@ -356,6 +391,15 @@ function App() {
           logo={project.logo}
         />
       ))}
+
+      {/* Visitors Map Section */}
+      <div className="content-container">
+        <h3>
+          Visitors
+        </h3>
+      </div>
+      
+      <MapWidget />
 
       {/* Footer */}
       <footer>
