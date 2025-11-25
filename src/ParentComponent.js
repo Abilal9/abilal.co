@@ -18,6 +18,18 @@ const ParentComponent = () => {
     } else {
       document.body.classList.remove('dark-mode');
     }
+    
+    // Force browser repaint/reflow for mobile Safari
+    // This ensures transitions trigger properly on iOS
+    void document.body.offsetHeight;
+    
+    // Also force repaint on all transition elements
+    requestAnimationFrame(() => {
+      document.body.style.transform = 'translateZ(0)';
+      requestAnimationFrame(() => {
+        document.body.style.transform = '';
+      });
+    });
   }, [isFlipped]);
 
   return (
