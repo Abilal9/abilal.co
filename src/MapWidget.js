@@ -24,8 +24,28 @@ const MapWidget = () => {
       mapContainerRef.current.appendChild(script);
     }
 
+    // After script loads, modify all links to open in new tab
+    const modifyLinks = () => {
+      if (mapContainerRef.current) {
+        const links = mapContainerRef.current.querySelectorAll('a');
+        links.forEach(link => {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        });
+      }
+    };
+
+    // Wait for script to load and inject content
+    script.onload = () => {
+      setTimeout(modifyLinks, 500); // Give it time to render
+    };
+
+    // Also try to modify links periodically in case they load slowly
+    const intervalId = setInterval(modifyLinks, 1000);
+
     // Cleanup function
     return () => {
+      clearInterval(intervalId);
       if (mapContainerRef.current && script.parentNode) {
         mapContainerRef.current.removeChild(script);
       }

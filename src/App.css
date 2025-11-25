@@ -143,7 +143,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #2C2C2C ;
-  transition: transform 0.5s, border-color 0.7s ease;
+  transition: transform 0.5s, background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
   transform-style: preserve-3d;
 }
 
@@ -310,7 +310,7 @@ h2 {
   border-bottom: 2px solid #fffff0 ;
   display: inline-block;
   padding-bottom: 5px;
-  transition: color 0.7s ease, border-color 0.7s ease;
+  transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
 }
 
 h3 {
@@ -322,7 +322,7 @@ h3 {
   padding-bottom: 5px;
   padding-top: 150px;
   margin-top: 0;
-  transition: color 0.7s ease, border-color 0.7s ease;
+  transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
 }
 
 @media (max-width: 600px) {
@@ -501,7 +501,7 @@ html, body {
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   border: 9px solid #fffff0 ;
   opacity: 0.7;
-  transition: transform 0.3s ease-out, border-color 0.7s ease;
+  transition: transform 0.3s ease-out, background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
   will-change: transform;
 }
 
@@ -512,7 +512,7 @@ html, body {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   border: 9px solid #2C2C2C;
   opacity: 0.7;
-  transition: transform 0.3s ease-out, border-color 0.7s ease;
+  transition: transform 0.3s ease-out, background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
   will-change: transform;
 }
 
@@ -520,7 +520,7 @@ html, body {
   max-height: 120px;
   cursor: pointer;
   overflow: hidden;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, padding 0.5s ease, max-height 0.5s ease;
+  padding: 25px;
   transition: all 0.4s ease-in-out;
 }
 
@@ -661,7 +661,7 @@ html, body {
   margin: 0 2px;
   transform: rotate(45deg);
   animation: arrow-bounce 1s infinite;
-  transition: border-color 0.7s ease;
+  transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
 }
 
 .arrow-left {
@@ -950,36 +950,6 @@ body.dark-mode .speech-bubble:hover {
   }
 }
 
-.project-section {
-  max-height: 120px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
-  padding: 25px 25px 15px 25px;
-}
-
-.project-section.expanded {
-  padding: 30px 30px 30px 30px;
-  max-height: 800px;
-}
-
-.project-section h2 {
-  margin-bottom: 10px;
-}
-
-.project-description {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.project-details p {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.project-logo {
-  margin-top: 10px;
-}
 
 .speech-bubble {
   position: absolute;
