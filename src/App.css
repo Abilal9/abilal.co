@@ -58,6 +58,11 @@ body {
   -webkit-transition: background-color 0.7s ease, color 0.7s ease;
 }
 
+.App {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 20px 10px;
@@ -438,6 +443,13 @@ footer p {
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.7s ease;
+  background-color: #fffff0;
+}
+
+html.dark-mode {
+  background-color: #111 !important;
+  transition: background-color 0.7s ease;
 }
 
 html, body {
@@ -776,8 +788,15 @@ body.dark-mode::-webkit-scrollbar {
 
 /* Force immediate style application on mobile */
 @media (max-width: 768px) {
-  body.dark-mode * {
+  body.dark-mode *,
+  html.dark-mode * {
     transition-delay: 0s !important;
+  }
+  
+  /* Ensure immediate background change on mobile */
+  html.dark-mode,
+  body.dark-mode {
+    transition-duration: 0.7s !important;
   }
 }
 

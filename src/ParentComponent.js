@@ -29,21 +29,48 @@ const ParentComponent = () => {
       cancelAnimationFrame(rafIdRef.current);
     }
     
-    // Apply dark mode class
+    // Apply dark mode class to both body and html
+    const html = document.documentElement;
+    const body = document.body;
+    
     if (isFlipped) {
-      document.body.classList.add('dark-mode');
+      body.classList.add('dark-mode');
+      html.classList.add('dark-mode');
     } else {
-      document.body.classList.remove('dark-mode');
+      body.classList.remove('dark-mode');
+      html.classList.remove('dark-mode');
     }
     
-    // Force immediate repaint for mobile Safari
-    // Read offsetHeight to force a synchronous reflow
-    void document.body.offsetHeight;
+    // CRITICAL: Force body AND html background to update immediately on mobile Safari
+    // This is the key fix for the background not changing
+    const currentBodyBg = window.getComputedStyle(body).backgroundColor;
+    const currentHtmlBg = window.getComputedStyle(html).backgroundColor;
     
-    // Then force a paint with RAF (only once, not nested)
+    // Force immediate style recalculation on both
+    void body.offsetHeight;
+    void html.offsetHeight;
+    
+    // Force background color recalculation by temporarily setting it
+    body.style.backgroundColor = currentBodyBg;
+    html.style.backgroundColor = currentHtmlBg;
+    
+    // Use RAF to clear the inline styles and let CSS take over
     rafIdRef.current = requestAnimationFrame(() => {
-      // Force all elements to recalculate styles
-      const elements = document.querySelectorAll('.profile-img, .background-shape, .name, .title, .extra-info, h2, h3, .arrow, .socials p');
+      body.style.backgroundColor = '';
+      html.style.backgroundColor = '';
+      
+      // Also force profile image border recalculation
+      const profileImg = document.querySelector('.profile-img');
+      if (profileImg) {
+        const currentBorder = window.getComputedStyle(profileImg).borderColor;
+        profileImg.style.borderColor = currentBorder;
+        requestAnimationFrame(() => {
+          profileImg.style.borderColor = '';
+        });
+      }
+      
+      // Force all other elements to recalculate styles
+      const elements = document.querySelectorAll('.background-shape, .name, .title, .extra-info, h2, h3, .arrow, .socials p');
       elements.forEach(el => {
         void el.offsetHeight;
       });
