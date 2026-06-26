@@ -227,7 +227,7 @@ function App() {
         <ParentComponent />
           <div className="name-container">
             <h1 className="name">Ahmad Bilal</h1>
-            <p className="title">Software Engineer & Developer</p>
+            <p className="title">Software Engineer</p>
             <p className="extra-info">
               <span role="img" aria-label="location">📍</span> Riyadh, KSA &nbsp; - &nbsp; Nationality: Irish
               </p>
@@ -249,11 +249,15 @@ function App() {
         <section ref={aboutRef} className={`fade-section ${aboutInView ? "fade-in" : "fade-out"}`}>
           <h2>About Me</h2>
           <p>
-          As a software developer with nearly five years of experience, I bring strong problem-solving abilities, analytical thinking, and a solid foundation in best practices. I'm deeply committed to continuous learning and actively seek out challenges that allow me to grow while delivering solutions that align with stakeholder goals and maintain clear, professional communication. I strive for excellence in every endeavor and am driven by the desire to constantly improve and push my own boundaries.
+          Software Engineer with 5+ years of experience delivering enterprise applications, system integrations, and digital transformation initiatives across telecommunications, government, and AI-driven projects. Experienced in full-stack development, cloud technologies, DevOps practices, and designing scalable solutions that align technical implementation with business objectives.
           </p>
           <br />
           <p>
-          My academic and professional journey reflects a strong sense of collaboration and a genuine passion for technology. I'm always eager to connect with like-minded professionals and contribute to impactful projects that drive innovation and create meaningful change.
+          PMP® certified and SAFe® Agilist, with a strong interest in solution architecture, technology consulting, and emerging technologies. Passionate about solving complex problems, driving continuous improvement, and collaborating with stakeholders to deliver impactful and scalable solutions.
+          </p>
+          <br />
+          <p>
+          Always eager to learn, connect with other professionals, and contribute to projects that create meaningful value through technology.
           </p>
         </section>
 
@@ -359,6 +363,7 @@ function App() {
         <section ref={certificationsRef} className={`fade-section ${certificationsInView ? "fade-in" : "fade-out"}`}>
           <h2>Certifications</h2>
           <ul>
+            <li><strong>Project Management Professional (PMP)® – </strong> Project Management Institute</li>
             <li><strong>Certified SAFe 6 Agilist – </strong> Scaled Agile, Inc.</li>
             <li><strong>AI Security & Governance – </strong> Securiti</li>
             <li><strong>Professional Web Developer – </strong> OutSystems</li>
